@@ -1,0 +1,9 @@
+options ; name     ; followup       ; prompt
+ynaf    ; reflect  ;                ; Did you reflect on your work?
+ynaf    ; update   ;                ; Did you give useful status updates?
+ynaf    ; help     ;                ; Did you help someone succeed?
+ynaf    ; discuss  ; What?          ; Did you actively discuss things with others?
+ynaf    ; lead     ; On what?       ; Did you take a lead on something?
+ynaf    ; feedback ; Whom and what? ; Did you give someone feedback?
+ynaf    ; propose  ; What idea?     ; Did you properly propose an idea to 2+ others?
+ynaf    ; speakup  ;                ; If something wasn't right, did you speak up or create an issue?
