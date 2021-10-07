@@ -1,8 +1,10 @@
 import csv
+from datetime import datetime
 
 options_delimiter = "/"
 empty_answer = "-"
 followup_option = "f"
+name_value_delimiter = "#"
 
 
 def _get_questions(filename):
@@ -38,8 +40,12 @@ def _form_options_string(question_obj):
 
 
 def _write_answers(answers, answers_file):
+    date_string = f"date{name_value_delimiter}{datetime.now().strftime('%m/%d/%Y')}"
+    fields = [date_string] + [
+        f"{name}{name_value_delimiter}{answer}" for (name, answer) in answers
+    ]
     with open(answers_file, "a") as f:
-        f.write("\t".join([f"{name}#{answer}" for (name, answer) in answers]) + "\n")
+        f.write("\t".join(fields) + "\n")
 
 
 def main(questions_file, answers_file):
